@@ -31,13 +31,13 @@ export default {
 @import "../assets/scss/_mixins.scss";
 
 .popup {
-  //display: none;
   position: fixed;
   display: flex;
   left: 0px;
   top: 0px;
   height: 100%;
   width: 100%;
+  display: none;
 
   &__content {
     position: absolute;
