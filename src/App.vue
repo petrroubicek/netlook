@@ -1,22 +1,24 @@
 <template>
   <div id="app">
-    <img width="25%" src="./assets/logo.png">
-    <HelloWorld msg="Hello Vue in CodeSandbox!" />
+    <PopUp/>
+    <Content/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import PopUp from "./components/PopUp";
+import Content from "./components/Content";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    PopUp,
+    Content
   }
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,4 +27,15 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+// MIXINS
+@mixin border-radius($pixel...) {
+  border-radius: $pixel;
+  -webkit-border-radius: $pixel;
+  -moz-border-radius: $pixel;
+}
+
+// VARIABLES
+$main-color: purple;
+$minor-color: #eee;
 </style>
