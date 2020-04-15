@@ -13,7 +13,7 @@
     <button
       type="button"
       class="component-button btn btn--primary btn--radius"
-      @click="showPopUpFN(datas.popUp2.profileImg, datas.popUp2.title, datas.popUp2.message, datas.popUp1.btn2, datas.popUp2.btn2)"
+      @click="showPopUpFN(datas.popUp2.profileImg, datas.popUp2.title, datas.popUp2.message, datas.popUp2.btn1, datas.popUp2.btn2)"
     >Show popup #2</button>
     <button
       type="button"

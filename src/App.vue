@@ -10,7 +10,11 @@
       <PopUp
         v-if="part == 'PopUp'"
         :selectedComponent="part"
+        :profileImg="popUp.profileImg"
         :title="popUp.title"
+        :message="popUp.message"
+        :btn1="popUp.btn1"
+        :btn2="popUp.btn2"
         :showHomeFN="showHome"
       ></PopUp>
       <Content v-if="part == 'Content'" :selectedComponent="part" :showHomeFN="showHome"></Content>
@@ -38,9 +42,13 @@ export default {
     };
   },
   methods: {
-    showPopUp(title) {
+    showPopUp(profileImg, title, message, btn1, btn2) {
       this.part = "PopUp";
+      this.popUp.profileImg = profileImg;
       this.popUp.title = title;
+      this.popUp.message = message;
+      this.popUp.btn1 = btn1;
+      this.popUp.btn2 = btn2;
       //this.$emit("changePart", this.selectedComponent);
     },
     showContent() {
