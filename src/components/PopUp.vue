@@ -36,12 +36,12 @@ export default {
   &__content {
     position: absolute;
     top: 50%;
-    left: calc(50% - 15px);
+    left: calc(50% - 2px);
     transform: translate(-50%, -50%);
     margin: 0px;
     padding: 20px;
     height: auto;
-    width: calc(100% - 100px);
+    width: calc(100% - 80px);
     background: #eee;
     z-index: 10;
     @include border-radius(20px);
