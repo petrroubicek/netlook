@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div class="container">
-      <Home v-if="part == 'Home'" :selectedComponent="part" :showComponentFN="showComponent"></Home>
-      <PopUp v-if="part == 'PopUp'" :selectedComponent="part" :showComponentFN="showComponent"></PopUp>
-      <Content v-if="part == 'Content'" :selectedComponent="part" :showComponentFN="showComponent"></Content>
+      <Home v-if="part == 'Home'" :selectedComponent="part" :showPopUpFN="showPopUp" :showContentFN="showContent"></Home>
+      <PopUp v-if="part == 'PopUp'" :selectedComponent="part" :showHomeFN="showHome"></PopUp>
+      <Content v-if="part == 'Content'" :selectedComponent="part" :showHomeFN="showHome"></Content>
     </div>
   </div>
 </template>
@@ -25,7 +25,12 @@ export default {
       this.part = "PopUp";
       //this.$emit("changePart", this.selectedComponent);
     },
-    showContent() {}
+    showContent() {
+      this.part = "Content";
+    },
+    showHome() {
+      this.part = "Home";
+    }
   },
   components: {
     Home,
