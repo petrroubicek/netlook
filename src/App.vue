@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <div class="container">
-      {{selectedComponent}}
-      <Home v-if="selectedComponent == 'Home'" :selectedComponent="selectedComponent" />
-      <PopUp v-if="selectedComponent == 'PopUp'" :selectedComponent="selectedComponent" />
-      <Content v-if="selectedComponent == 'Content'" :selectedComponent="selectedComponent" />
+      <Home v-if="part == 'Home'" :selectedComponent="part" :showComponentFN="showComponent"></Home>
+      <PopUp v-if="part == 'PopUp'" :selectedComponent="part" :showComponentFN="showComponent"></PopUp>
+      <Content v-if="part == 'Content'" :selectedComponent="part" :showComponentFN="showComponent"></Content>
     </div>
   </div>
 </template>
@@ -18,8 +17,15 @@ export default {
   name: "App",
   data() {
     return {
-      selectedComponent: "Home"
+      part: "Home"
     };
+  },
+  methods: {
+    showPopUp(profile, title, description, buttons) {
+      this.part = "PopUp";
+      //this.$emit("changePart", this.selectedComponent);
+    },
+    showContent() {}
   },
   components: {
     Home,

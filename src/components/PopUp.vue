@@ -1,7 +1,12 @@
 <template>
   <div class="popup">
     <div class="popup__content">
-      <button type="button" class="popup__content-close btn btn--icon btn--close">X</button>
+      <button 
+        type="button" 
+        class="popup__content-close btn btn--icon btn--close"
+        @click="showComponentFN('Home')">
+        X
+      </button>
       <div class="popup__content-header">
         <img
           src="https://i.pinimg.com/originals/21/36/91/21369158540994fa57bf2f250f88a2dd.jpg"
@@ -23,7 +28,11 @@
 
 <script>
 export default {
-  name: "PopUp"
+  name: "PopUp",
+  props: {
+    selectedComponent: String,
+    showComponentFN: Function
+  }
 };
 </script>
 

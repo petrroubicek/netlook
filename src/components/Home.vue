@@ -4,24 +4,22 @@
     <p class="description">Výsledné řešení se nachází
       <br>po kliknutí na konkrétní button.
     </p>
-    {{showPart}}
-
     <!--% ÚLOHY -->
     <button
       type="button"
       class="start-button btn btn--primary btn--radius"
-      @click="showPart = 'PopUp'"
+      @click="showPopUpFN(profile, title, description, buttons)"
     >Show popup #1</button>
     <button
       type="button"
       class="start-button btn btn--primary btn--radius"
-      @click="selectedComponent = 'PopUp'"
+      @click="showPopUpFN(profile, title, description, buttons)"
     >Show popup #2</button>
     <button
       type="button"
       class="start-button btn btn--primary btn--radius"
-      @click="selectedComponent = 'Content'"
-    >Show content</button>
+      @click="showContentFN()"
+    >Show popup #2</button>
 
     <!--% KONTAKT -->
     <a
@@ -34,16 +32,10 @@
 <script>
 export default {
   name: "Home",
-  data() {
-    return {
-      showPart: "Home"
-    }
-  },
-  methods: {
-    showWork() {
-      this.showPart = "PopUp";
-      console.log("yes");
-    }
+  props: {
+    selectedComponent: String,
+    showPopUpFN: Function,
+    showContentFN: Function
   }
 };
 </script>
