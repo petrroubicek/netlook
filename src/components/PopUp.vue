@@ -10,7 +10,7 @@
         <img v-if="profileImg" src="profileImg" class="popup__content-header">
       </div>
       <div class="popup__content-body">
-        <h2>{{title}} {{selectedComponent}}</h2>
+        <h2>{{title}}</h2>
         <p>{{description}}</p>
       </div>
       <div class="popup__content-footer">
