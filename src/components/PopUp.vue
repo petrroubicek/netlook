@@ -28,19 +28,27 @@ export default {
 @import "../assets/scss/_mixins.scss";
 
 .popup {
+  position: fixed;
   display: flex;
-  
+  height: 100%;
+  width: 100%;
 
   &__content {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 15px);
+    transform: translate(-50%, -50%);
+    margin: 0px;
     padding: 20px;
-    width: 100%;
+    height: auto;
+    width: calc(100% - 100px);
     background: #eee;
     z-index: 10;
     @include border-radius(20px);
   }
 
   &__overlay {
-    @include overlay;
+    @include overlay(#333, 1);
   }
 }
 </style>

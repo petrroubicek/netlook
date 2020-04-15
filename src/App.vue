@@ -37,6 +37,7 @@ body {
 .container {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   margin: 0px auto;
   height: $default-device-height;
   width: $default-device-width;
