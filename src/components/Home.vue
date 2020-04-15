@@ -7,17 +7,17 @@
     <!--% ÚLOHY -->
     <button
       type="button"
-      class="start-button btn btn--primary btn--radius"
-      @click="showPopUpFN()"
+      class="component-button btn btn--primary btn--radius"
+      @click="showPopUpFN(datas.popUp1.profileImg, datas.popUp1.title, datas.popUp1.message, datas.popUp1.btn1, datas.popUp1.btn2)"
     >Show popup #1</button>
     <button
       type="button"
-      class="start-button btn btn--primary btn--radius"
-      @click="showPopUpFN()"
+      class="component-button btn btn--primary btn--radius"
+      @click="showPopUpFN(datas.popUp2.profileImg, datas.popUp2.title, datas.popUp2.message, datas.popUp1.btn2, datas.popUp2.btn2)"
     >Show popup #2</button>
     <button
       type="button"
-      class="start-button btn btn--primary btn--radius"
+      class="component-button btn btn--primary btn--radius"
       @click="showContentFN()"
     >Show content</button>
 
@@ -34,9 +34,29 @@ export default {
   name: "Home",
   props: {
     selectedComponent: String,
-    popUpData: Array,
     showPopUpFN: Function,
     showContentFN: Function
+  },
+  data() {
+    return {
+      datas: {
+        popUp1: {
+          profileImg: "",
+          title: "Title example for two rows",
+          message: "Random text all users will see. You",
+          btn1: "Btn1",
+          btn2: "Btn3"
+        },
+        popUp2: {
+          profileImg:
+            "https://i.pinimg.com/originals/21/36/91/21369158540994fa57bf2f250f88a2dd.jpg",
+          title: "Title example for two rows",
+          message: "Random text all users will see. You don´t know",
+          btn1: "Btn2",
+          btn2: "Btn1"
+        }
+      }
+    };
   }
 };
 </script>
@@ -61,7 +81,7 @@ export default {
   color: $minor-color;
 }
 
-.start-button {
+.component-button {
   margin: 20px 40px;
   height: 50px;
 }

@@ -10,7 +10,7 @@
       <PopUp
         v-if="part == 'PopUp'"
         :selectedComponent="part"
-        :title="popUp[0].title"
+        :title="popUp.title"
         :showHomeFN="showHome"
       ></PopUp>
       <Content v-if="part == 'Content'" :selectedComponent="part" :showHomeFN="showHome"></Content>
@@ -28,28 +28,19 @@ export default {
   data() {
     return {
       part: "Home",
-      popUp: [
-        {
-          profileImg: "",
-          title: "Title example for two rows",
-          description: "Random text all users will see. You",
-          btn1: "Btn1",
-          btn2: "Btn3"
-        },
-        {
-          profileImg:
-            "https://i.pinimg.com/originals/21/36/91/21369158540994fa57bf2f250f88a2dd.jpg",
-          title: "Title example for two rows",
-          description: "Random text all users will see. You don´t know",
-          btn1: "Btn2",
-          btn2: "Btn1"
-        }
-      ]
+      popUp: {
+        profileImg: "",
+        title: "test",
+        description: "Random text all users will see. You",
+        btn1: "Btn1",
+        btn2: "Btn3"
+      },
     };
   },
   methods: {
-    showPopUp() {
+    showPopUp(title) {
       this.part = "PopUp";
+      this.popUp.title = title;
       //this.$emit("changePart", this.selectedComponent);
     },
     showContent() {
