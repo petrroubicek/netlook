@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <div class="container">
-      <PopUp/>
-      <Content/>
+      <button type="button" class="btn btn--primary">Show popup #1</button>
+      <button type="button" class="btn btn--primary">Show popup #2</button>
+      <button type="button" class="btn btn--primary">Show content</button>
+      
+      <PopUp  />
+      <Content />
     </div>
   </div>
 </template>
@@ -16,12 +20,19 @@ export default {
   components: {
     PopUp,
     Content
+  },
+  methods: {
+    showPopUp() {
+
+    }
   }
 };
 </script>
 
 <style lang="scss">
 @import "./assets/scss/_variables.scss";
+@import "./assets/scss/_mixins.scss";
+@import "./assets/scss/_buttons.scss";
 
 body {
   margin: 0px;

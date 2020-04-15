@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss" scoped>
 .test {
+  display: none;
   color: green;
 }
 </style>

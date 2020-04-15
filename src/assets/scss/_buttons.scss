@@ -22,17 +22,17 @@
   
   color: $color;
   background-color: $background;
-  border-color: $border;
+  border: $border;
 
   &:focus {
     color: $color;
     background-color: darken($background, 10%);
-    border-color: darken($border, 25%);
+    //border: darken($border, 25%);
   }
   &:hover {
     color: $color;
     background-color: darken($background, 10%);
-    border-color: darken($border, 12%);
+    //border: darken($border, 12%);
   }
 
   .badge {
@@ -50,7 +50,7 @@
 // BUTTONS
 .btn {
   @include button-variant(#aaa, transparent, none);
-  @include button-size(10px, 10px, 14px, 0px);
+  @include button-size(10px, 16px, 14px);
 
   &--primary {
     @include button-variant(#fff, $main-color, none);
@@ -59,6 +59,10 @@
     @include button-variant($main-color, transparent, 2px solid $main-color);
   }
   &--radius {
-    @include border-radius(12px);
+    @include border-radius(20px);
+  }
+  &--icon {
+    height: 48px;
+    width: 48px;
   }
 }
