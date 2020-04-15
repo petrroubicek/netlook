@@ -37,7 +37,7 @@ export default {
   top: 0px;
   height: 100%;
   width: 100%;
-  display: none;
+  //display: none;
 
   &__content {
     position: absolute;
