@@ -1,0 +1,64 @@
+// IMPORTS
+@import "variables", "mixins";
+
+// BUTTON VARIANT
+@mixin button-variant($color, $background, $border) {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  user-select: none;
+  outline: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// BUTTON SIZES
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+}
+
+// BUTTONS
+.btn {
+  @include button-variant(#aaa, transparent, none);
+  @include button-size(10px, 10px, 14px, 0px);
+
+  &--primary {
+    @include button-variant(#fff, $main-color, none);
+  }
+  &--border {
+    @include button-variant($main-color, transparent, 2px solid $main-color);
+  }
+  &--radius {
+    @include border-radius(12px);
+  }
+}

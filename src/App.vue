@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <PopUp/>
-    <Content/>
+    <div class="container">
+      <PopUp/>
+      <Content/>
+    </div>
   </div>
 </template>
 
@@ -19,23 +21,24 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/scss/_variables.scss";
+
+body {
+  margin: 0px;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 
-// MIXINS
-@mixin border-radius($pixel...) {
-  border-radius: $pixel;
-  -webkit-border-radius: $pixel;
-  -moz-border-radius: $pixel;
+.container {
+  position: relative;
+  display: flex;
+  margin: 0px auto;
+  height: $default-device-height;
+  width: $default-device-width;
 }
-
-// VARIABLES
-$main-color: purple;
-$minor-color: #eee;
 </style>

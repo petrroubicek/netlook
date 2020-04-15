@@ -1,21 +1,20 @@
 <template>
-  <div>
-    <h2 class="test">popup</h2>
-
-    <div class="popup">
+  <div class="popup">
+    <div class="popup__content">
       <button type="button">X</button>
-      <div class="popup__header">
+      <div class="popup__content-header">
         <img src>
       </div>
-      <div class="popup__body">
+      <div class="popup__content-body">
         <h2>Test</h2>
-        <p>Some text ...</p>
+        <p>Some text ....</p>
       </div>
-      <div class="popup__footer">
-        <button type="button">BTN1</button>
-        <button type="button">BTN0</button>
+      <div class="popup__content-footer">
+        <button type="button" class="btn btn--primary">BTN1</button>
+        <button type="button" class="btn">BTN0</button>
       </div>
     </div>
+    <div class="popup__overlay"></div>
   </div>
 </template>
 
@@ -26,9 +25,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/_mixins.scss";
+
 .popup {
-  background: #eee;
-  //@include border-radius(20px);
+  display: flex;
+  
+
+  &__content {
+    padding: 20px;
+    width: 100%;
+    background: #eee;
+    z-index: 10;
+    @include border-radius(20px);
+  }
+
+  &__overlay {
+    @include overlay;
+  }
 }
 </style>
 

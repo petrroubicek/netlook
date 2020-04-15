@@ -1,0 +1,21 @@
+// MIXINS
+
+// BORDER-RADIUS
+@mixin border-radius($pixel...) {
+  border-radius: $pixel;
+  -webkit-border-radius: $pixel;
+  -moz-border-radius: $pixel;
+}
+
+// OVERLAY
+@mixin overlay($bgColor: #000, $bgOpacity: 0.6) {
+  & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($bgColor, $bgOpacity);
+    z-index: 0;
+  }
+}
