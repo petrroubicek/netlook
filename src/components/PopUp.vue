@@ -7,18 +7,15 @@
         @click="showHomeFN()"
       >X</button>
       <div class="popup__content-header">
-        <img
-          src="https://i.pinimg.com/originals/21/36/91/21369158540994fa57bf2f250f88a2dd.jpg"
-          class="popup__content-header"
-        >
+        <img v-if="profileImg" src="profileImg" class="popup__content-header">
       </div>
       <div class="popup__content-body">
-        <h2>Test</h2>
-        <p>Some text ....</p>
+        <h2>{{title}} {{selectedComponent}}</h2>
+        <p>{{description}}</p>
       </div>
       <div class="popup__content-footer">
-        <button type="button" class="btn btn--primary btn--radius">BTN1</button>
-        <button type="button" class="btn">BTN0</button>
+        <button type="button" class="btn btn--primary btn--radius">{{btn1}}</button>
+        <button type="button" class="btn">{{btn2}}</button>
       </div>
     </div>
     <div class="popup__overlay"></div>
@@ -30,6 +27,11 @@ export default {
   name: "PopUp",
   props: {
     selectedComponent: String,
+    profileImg: String,
+    title: String,
+    description: String,
+    btn1: String,
+    btn2: String,
     showHomeFN: Function
   }
 };
@@ -45,7 +47,6 @@ export default {
   top: 0px;
   height: 100%;
   width: 100%;
-  //display: none;
 
   &__content {
     position: absolute;

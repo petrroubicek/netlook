@@ -8,12 +8,17 @@
     <button
       type="button"
       class="start-button btn btn--primary btn--radius"
-      @click="showPopUpFN(profile, title, description, buttons)"
+      :profileImg="popUpData.popUp1.profileImg"
+      :title="popUpData.popUp1.title"
+      :description="popUpData.popUp1.description"
+      :btnText1="popUpData.popUp1.btn1"
+      :btnText2="popUpData.popUp1.btn2"
+      @click="showPopUpFN()"
     >Show popup #1</button>
     <button
       type="button"
       class="start-button btn btn--primary btn--radius"
-      @click="showPopUpFN(profile, title, description, buttons)"
+      @click="showPopUpFN()"
     >Show popup #2</button>
     <button
       type="button"
@@ -34,6 +39,7 @@ export default {
   name: "Home",
   props: {
     selectedComponent: String,
+    popUpData: Object,
     showPopUpFN: Function,
     showContentFN: Function
   }
