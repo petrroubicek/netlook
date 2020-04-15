@@ -34,10 +34,10 @@ export default {
       part: "Home",
       popUp: {
         profileImg: "",
-        title: "test",
-        description: "Random text all users will see. You",
-        btn1: "Btn1",
-        btn2: "Btn3"
+        title: "",
+        description: "",
+        btn1: "",
+        btn2: ""
       },
     };
   },

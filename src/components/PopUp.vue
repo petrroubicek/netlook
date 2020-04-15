@@ -7,11 +7,11 @@
         @click="showHomeFN()"
       >X</button>
       <div class="popup__content-header">
-        <img v-if="profileImg" src="profileImg" class="popup__content-header">
+        <img v-if="profileImg" :src="profileImg" class="popup__content-header">
       </div>
       <div class="popup__content-body">
         <h2>{{title}}</h2>
-        <p>{{description}}</p>
+        <p>{{message}}</p>
       </div>
       <div class="popup__content-footer">
         <button type="button" class="btn btn--primary btn--radius">{{btn1}}</button>
@@ -29,7 +29,7 @@ export default {
     selectedComponent: String,
     profileImg: String,
     title: String,
-    description: String,
+    message: String,
     btn1: String,
     btn2: String,
     showHomeFN: Function
