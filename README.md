@@ -1,2 +1,0 @@
-# netlook
-Created with CodeSandbox
