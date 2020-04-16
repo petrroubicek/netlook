@@ -33,8 +33,8 @@
 }
 
 // SHADOW 
-@mixin shadow($color, $opacity){
-  -webkit-box-shadow: rgba($color, $opacity) 0 1px 3px;
-  -moz-box-shadow: rgba($color, $opacity) 0 1px 3px;
-  box-shadow: rgba($color, $opacity) 0 1px 3px;
+@mixin shadow($color, $right, $bottom, $blur, $opacity){
+  -webkit-box-shadow: rgba($color, $opacity) $right $bottom $blur;
+  -moz-box-shadow: rgba($color, $opacity) $right $bottom $blur;
+  box-shadow: rgba($color, $opacity) $right $bottom $blur;
 }

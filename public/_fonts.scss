@@ -55,7 +55,13 @@
   url('sf-ui-display-black-58646a6b80d5a.woff') format('woff');
 }
 
-
-// IMPORT FONT
-//@import url(//db.onlinewebfonts.com/c/1c45e28f8e86cc89876f003b953cc3e9?family=SF+Pro+Text);
-@font-face {font-family: "SF Pro Text"; src: url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.eot"); src: url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.woff") format("woff"), url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.svg#SF Pro Text") format("svg"); }
+@font-face {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: normal;
+  src: local('SF Pro Text'), 
+  url('sf-pro-text.woff') format('woff'),
+  url('sf-pro-text.woff2') format('woff2'),
+  url('sf-pro-text.ttf') format('ttf'),
+  url('sf-pro-text.eot') format('eot');
+}

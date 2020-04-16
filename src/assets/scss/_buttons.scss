@@ -60,7 +60,7 @@
     @include border-radius(24px);
   }
   &--shadow {
-    @include shadow($shadow-color, 0.3);
+    @include shadow($shadow-color, 2px, 10px, 20px, 0.3);
   }
   &--icon {
     height: 50px;

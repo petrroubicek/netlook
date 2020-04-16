@@ -7,7 +7,7 @@
   margin: 0px auto;
   height: 100%;
   width: 100%;
-  max-width: $content-max-width;
+  //max-width: $content-max-width;
   //@include gradient(#fff, #d6d6d6);
   background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #fcfcfc,  #f5f5f5, #e5e5e5, #dedede, #d6d6d6);
 
@@ -29,6 +29,7 @@
       height: 32px;
       width: 100%;
       background: url("./images/arrow.png") center center no-repeat;
+      background-size: 32px 22px;
     }
   }
 
@@ -41,6 +42,8 @@
       height: auto;
       max-height: 158px;
       width: 75px;
+      @include shadow(#000, 0px, 2px, 6px, 0.3);
+      @include border-radius(7px); 
     }
 
     &__box {
@@ -48,7 +51,7 @@
 
       h2 {
         position: relative;
-        margin: 25px 0px 20px;
+        margin: 25px 0px 30px;
         padding-left: 64px;
         text-align: left;
         font-size: 22px;
@@ -75,6 +78,7 @@
           background: $main-color;
           color: #fff;
           @include border-radius(100%);
+          @include shadow($shadow-color, 2px, 8px, 20px, 0.3);
         }
       }
       a, span {

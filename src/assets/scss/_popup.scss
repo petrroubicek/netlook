@@ -29,6 +29,7 @@
       width: 70px;
       @include border-radius(100%);
       background: url("./images/profil.png") center center no-repeat;
+      background-size: 70px 70px;
 
       &--badge:after {
         content: "";
@@ -38,11 +39,12 @@
         height: 28px;
         width: 28px;
         background: url("./images/badge.png") center center no-repeat;
+        background-size: 28px 28px;
       }
 
       img {
         height: auto;
-        width: 100%;
+        width: 70px;
         @include border-radius(100%);
       }
     }
@@ -100,6 +102,7 @@
       top: 0px;
       padding: 0px;
       background: url("./images/close.png") center center no-repeat;
+      background-size: 14px 14px;
     }
   }
 
