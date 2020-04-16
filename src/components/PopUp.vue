@@ -6,8 +6,11 @@
         class="popup-content__close btn btn--icon btn--close"
         @click="showHomeFN()"
       ></button>
-      <div class="popup-content__header">
-        <img v-if="profileImg" :src="profileImg" class="popup__content-header">
+      <div
+        class="popup-content__header"
+        v-bind:class="{'popup-content__header--badge': profileImg}"
+      >
+        <img v-if="profileImg" :src="profileImg">
       </div>
       <div class="popup-content__body">
         <h2 v-bind:class="{'double-row': doubleRowTitle}">{{title}}</h2>
@@ -17,8 +20,8 @@
         class="popup-content__footer"
         v-bind:class="{'popup-content__footer--vertical': !btnHorizontal}"
       >
-        <button type="button" :class="btn1Class">{{btn1Txt}}</button>
-        <button type="button" :class="btn2Class">{{btn2Txt}}</button>
+        <button type="button" :class="btn1Class">{{btn1Text}}</button>
+        <button type="button" :class="btn2Class">{{btn2Text}}</button>
       </div>
     </div>
     <div class="popup-overlay"></div>
@@ -35,9 +38,9 @@ export default {
     doubleRowTitle: Boolean,
     message: String,
     btnHorizontal: Boolean,
-    btn1Txt: String,
+    btn1Text: String,
     btn1Class: String,
-    btn2Txt: String,
+    btn2Text: String,
     btn2Class: String,
     showHomeFN: Function
   }

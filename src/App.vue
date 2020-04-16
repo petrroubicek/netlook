@@ -15,13 +15,18 @@
         :doubleRowTitle="popUp.doubleRowTitle"
         :message="popUp.message"
         :btnHorizontal="popUp.btnHorizontal"
-        :btn1Txt="popUp.btn1Txt"
+        :btn1Text="popUp.btn1Text"
         :btn1Class="popUp.btn1Class"
-        :btn2Txt="popUp.btn2.Txt"
+        :btn2Text="popUp.btn2Text"
         :btn2Class="popUp.btn2Class"
         :showHomeFN="showHome"
       ></PopUp>
-      <Content v-if="part == 'Content'" :selectedComponent="part" :showHomeFN="showHome"></Content>
+      <Content
+        v-if="part == 'Content'"
+        :selectedComponent="part"
+        :steps="steps"
+        :showHomeFN="showHome"
+      ></Content>
     </div>
   </div>
 </template>
@@ -42,11 +47,12 @@ export default {
         doubleRowTitle: false,
         description: "",
         btnHorizontal: false,
-        btn1Txt: "",
+        btn1Text: "",
         btn1Class: "",
-        btn2Txt: "",
+        btn2Text: "",
         btn2Class: ""
-      }
+      },
+      steps: []
     };
   },
   methods: {
@@ -56,9 +62,9 @@ export default {
       doubleRowTitle,
       message,
       btnHorizontal,
-      btn1Txt,
+      btn1Text,
       btn1Class,
-      btn2Txt,
+      btn2Text,
       btn2Class
     ) {
       this.part = "PopUp";
@@ -67,9 +73,9 @@ export default {
       this.popUp.doubleRowTitle = doubleRowTitle;
       this.popUp.message = message;
       this.popUp.btnHorizontal = btnHorizontal;
-      this.popUp.btn1Txt = btn1Txt;
+      this.popUp.btn1Text = btn1Text;
       this.popUp.btn1Class = btn1Class;
-      this.popUp.btn2Txt = btn2Txt;
+      this.popUp.btn2Text = btn2Text;
       this.popUp.btn2Class = btn2Class;
     },
     showContent() {

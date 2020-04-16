@@ -1,0 +1,47 @@
+@import "mixins.scss", "variables.scss";
+
+.content {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  top: 0px;
+  margin: 0px auto;
+  height: 100%;
+  width: 100%;
+  max-width: $popUp-max-width;
+
+  &-title {
+    margin: 35px 0px 30px;
+    font-family: "SF UI Display Semibold";
+    font-size: 27px;
+  }
+
+  &-step {
+    display: flex;
+    padding: 0px 15px 95px;
+
+    &__img {
+      height: auto;
+      width: 75px;
+    }
+
+    &__box {
+      margin-left: 30px;
+
+      h2 {
+        margin: 25px 0px 15px;
+        padding-left: 64px;
+        text-align: left;
+        font-size: 22px;
+        font-family: "SF UI Display Semibold";
+      }
+      a, span {
+        text-align: left;
+        display: inline-block;
+        font-size: 14px;
+        color: #000;
+        line-height: 1.4;
+      }
+    }
+  }
+}

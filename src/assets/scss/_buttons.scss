@@ -13,11 +13,10 @@
   user-select: none;
   outline: none;
   white-space: nowrap;
-  text-transform: uppercase;
   font-weight: 500;
   font-style: inherit;
   font-variant: inherit;
-  font-family: inherit;
+  font-family: "SF UI Display Bold";
   text-decoration: none;
   max-height: 50px;
   
@@ -51,16 +50,17 @@
 // BUTTONS
 .btn {
   @include button-variant(#aaa, transparent, none);
-  @include button-size(10px, 16px, 14px);
+  @include button-size(10px, 16px, 16px);
 
   &--primary {
     @include button-variant(#fff, $main-color, none);
   }
   &--border {
-    @include button-variant($main-color, transparent, 2px solid $main-color);
+    @include button-variant($main-color, transparent, 1px solid $main-color);
+    font-family: "SF UI Display Light";
   }
   &--radius {
-    @include border-radius(20px);
+    @include border-radius(24px);
   }
   &--icon {
     height: 50px;

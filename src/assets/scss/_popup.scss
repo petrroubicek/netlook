@@ -23,11 +23,22 @@
     @include border-radius($popUp-radius);
 
     &__header {
+      position: relative;
       margin: 0px auto;
       height: 70px;
       width: 70px;
       @include border-radius(100%);
       background: url("./images/profil.png") center center no-repeat;
+
+      &--badge:after {
+        content: "";
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        height: 28px;
+        width: 28px;
+        background: url("./images/badge.png") center center no-repeat;
+      }
 
       img {
         height: auto;
@@ -61,18 +72,18 @@
     }
 
     &__footer {
-      display: flex;
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: 1fr 1fr;
       padding: 0px 22px;
 
       &--vertical {
+        display: flex;
         flex-direction: column;
-      }
-      &--horizontal {
-        flex-direction: row;
       }
 
       button {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         height: 44px;
         width: 100%;
       }

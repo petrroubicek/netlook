@@ -13,9 +13,9 @@
       datas.popUp1.doubleRowTitle, 
       datas.popUp1.message, 
       datas.popUp1.btnHorizontal,
-      datas.popUp1.btn1Txt, 
+      datas.popUp1.btn1Text, 
       datas.popUp1.btn1Class, 
-      datas.popUp1.btn2Txt, 
+      datas.popUp1.btn2Text, 
       datas.popUp1.btn2Class)"
     >Show popup #1</button>
     <button
@@ -26,9 +26,9 @@
       datas.popUp2.doubleRowTitle, 
       datas.popUp2.message, 
       datas.popUp2.btnHorizontal,
-      datas.popUp2.btn1Txt, 
+      datas.popUp2.btn1Text, 
       datas.popUp2.btn1Class, 
-      datas.popUp2.btn2Txt, 
+      datas.popUp2.btn2Text, 
       datas.popUp2.btn2Class)"
     >Show popup #2</button>
     <button
@@ -62,9 +62,9 @@ export default {
           doubleRowTitle: true,
           message: "Random text all users will see. You",
           btnHorizontal: false,
-          btn1Txt: "Btn1",
+          btn1Text: "Btn1",
           btn1Class: "btn btn--primary btn--radius",
-          btn2Txt: "Btn3",
+          btn2Text: "Btn3",
           btn2Class: "btn"
         },
         popUp2: {
@@ -73,9 +73,9 @@ export default {
           doubleRowTitle: false,
           message: "Random text all users will see. You don´t know",
           btnHorizontal: true,
-          btn1Txt: "Btn2",
-          btn1Class: "btn btn--primary btn--radius btn-border",
-          btn2Txt: "Btn1",
+          btn1Text: "Btn2",
+          btn1Class: "btn btn--border btn--radius",
+          btn2Text: "Btn1",
           btn2Class: "btn btn--primary btn--radius"
         }
       }
@@ -107,7 +107,7 @@ export default {
 
 .component-button {
   margin: 20px 40px;
-  height: 50px;
+  height: 44px;
 }
 .contact-button {
   margin: 60px 40px 10px;
