@@ -1,0 +1,60 @@
+@import "mixins.scss";
+
+.popup {
+  position: fixed;
+  display: flex;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 31px);
+    transform: translate(-50%, -50%);
+    margin: 0px 31px;
+    padding: 20px;
+    height: auto;
+    width: calc(100% - 103px);
+    background: #eee;
+    z-index: 10;
+    @include border-radius(20px);
+
+    &-header {
+      margin: 0px auto;
+      height: 48px;
+      width: 48px;
+      @include border-radius(100%);
+      background: url("../img/profil.png");
+
+      img {
+        height: 48px;
+        width: 48px;
+        @include border-radius(100%);
+      }
+    }
+
+    &-body {
+      h2 {
+        font-family: "SF UI Display Semibold";
+        font-size: 18pt;
+      }
+    }
+
+    &-close {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 14px;
+      width: 14px;
+      padding: 0px;
+      color: #aaa;
+      background: url("../img/close.png");
+    }
+  }
+
+  &__overlay {
+    @include overlay(#333, 1);
+  }
+}

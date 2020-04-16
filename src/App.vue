@@ -38,7 +38,7 @@ export default {
         description: "",
         btn1: "",
         btn2: ""
-      },
+      }
     };
   },
   methods: {
@@ -67,6 +67,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "/public/_fonts.scss";
 @import "./assets/scss/_variables.scss";
 @import "./assets/scss/_mixins.scss";
 @import "./assets/scss/_buttons.scss";
@@ -76,7 +77,7 @@ body {
 }
 
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "SF UI Display Light";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

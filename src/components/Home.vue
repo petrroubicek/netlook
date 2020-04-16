@@ -74,6 +74,7 @@ export default {
   margin: 0px 0px 30px;
   color: $main-color;
   text-transform: uppercase;
+  font-family: "SF UI Display Medium";
 }
 .description {
   margin: 0px 0px 40px;
