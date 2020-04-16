@@ -21,6 +21,7 @@
     background: $popUp-bg;
     z-index: 10;
     @include border-radius($popUp-radius);
+    @include shadow(#000, 0px, 0px, 10px, 0.3);
 
     &__header {
       position: relative;
