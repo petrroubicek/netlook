@@ -4,7 +4,8 @@
     <p class="description">Výsledné řešení se nachází
       <br>po kliknutí na konkrétní button.
     </p>
-    <!--% ÚLOHY -->
+
+    <!--% TASKS -->
     <button
       type="button"
       class="component-button btn btn--primary btn--radius"
@@ -18,6 +19,7 @@
       datas.popUp1.btn2Text, 
       datas.popUp1.btn2Class)"
     >Show popup #1</button>
+    
     <button
       type="button"
       class="component-button btn btn--primary btn--radius"
@@ -31,13 +33,14 @@
       datas.popUp2.btn2Text, 
       datas.popUp2.btn2Class)"
     >Show popup #2</button>
+    
     <button
       type="button"
       class="component-button btn btn--primary btn--radius"
       @click="showContentFN()"
     >Show content</button>
 
-    <!--% KONTAKT -->
+    <!--% CONTACT -->
     <a
       href="tel:777556047"
       class="contact-button btn btn--primary btn--radius btn--border"
@@ -85,31 +88,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/scss/_variables.scss";
-@import "../assets/scss/_mixins.scss";
-
-.row {
-  display: flex;
-  flex-flow: column;
-}
-
-.title {
-  margin: 0px 0px 30px;
-  color: $main-color;
-  text-transform: uppercase;
-  font-family: "SF UI Display Medium";
-}
-.description {
-  margin: 0px 0px 40px;
-  line-height: 1.5;
-  color: $minor-color;
-}
-
-.component-button {
-  margin: 20px 40px;
-  height: 44px;
-}
-.contact-button {
-  margin: 60px 40px 10px;
-}
+@import "../assets/scss/_home.scss";
 </style>

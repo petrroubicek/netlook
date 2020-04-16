@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <div class="container">
+      <!-- HOMEPAGE -->
       <Home
         v-if="part == 'Home'"
         :selectedComponent="part"
         :showPopUpFN="showPopUp"
         :showContentFN="showContent"
       ></Home>
+      <!-- POPUP -->
       <PopUp
         v-if="part == 'PopUp'"
         :selectedComponent="part"
@@ -21,12 +23,8 @@
         :btn2Class="popUp.btn2Class"
         :showHomeFN="showHome"
       ></PopUp>
-      <Content
-        v-if="part == 'Content'"
-        :selectedComponent="part"
-        :steps="steps"
-        :showHomeFN="showHome"
-      ></Content>
+      <!-- CONTENT -->
+      <Content v-if="part == 'Content'" :selectedComponent="part" :showHomeFN="showHome"></Content>
     </div>
   </div>
 </template>
@@ -51,8 +49,7 @@ export default {
         btn1Class: "",
         btn2Text: "",
         btn2Class: ""
-      },
-      steps: []
+      }
     };
   },
   methods: {
@@ -98,27 +95,5 @@ export default {
 @import "./assets/scss/_variables.scss";
 @import "./assets/scss/_mixins.scss";
 @import "./assets/scss/_buttons.scss";
-
-body {
-  margin: 0px;
-  counter-reset: step;
-}
-
-#app {
-  font-family: "SF UI Display Light";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-}
-
-.container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0px auto;
-  height: $default-device-height;
-  width: $default-device-width;
-}
+@import "./assets/scss/_layout.scss";
 </style>

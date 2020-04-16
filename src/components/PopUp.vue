@@ -1,21 +1,28 @@
 <template>
   <div class="popup">
     <div class="popup-content">
+      <!-- CLOSE BTN -->
       <button
         type="button"
         class="popup-content__close btn btn--icon btn--close"
         @click="showHomeFN()"
       ></button>
+
+      <!-- POPUP HEADER -->
       <div
         class="popup-content__header"
         v-bind:class="{'popup-content__header--badge': profileImg}"
       >
         <img v-if="profileImg" :src="profileImg">
       </div>
+
+      <!-- POPUP BODY -->
       <div class="popup-content__body">
         <h2 v-bind:class="{'double-row': doubleRowTitle}">{{title}}</h2>
         <p>{{message}}</p>
       </div>
+
+      <!-- POPUP FOOTER -->
       <div
         class="popup-content__footer"
         v-bind:class="{'popup-content__footer--vertical': !btnHorizontal}"
@@ -24,6 +31,8 @@
         <button type="button" :class="btn2Class">{{btn2Text}}</button>
       </div>
     </div>
+
+    <!-- OVERLAY -->
     <div class="popup-overlay"></div>
   </div>
 </template>
