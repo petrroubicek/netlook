@@ -7,15 +7,21 @@ $default-max-width: 375px;
 // COLORS
 $main-color: #A70174;
 $minor-color: #aaa;
+$shadow-color: #902071;
+
+// BREAKPOINT
+$breakpoint-mobile-xs: 374px;
 
 
 // POPUP
-$popUp-bg: #eee;
+$popUp-bg: #eee;    //  dark mode: $popUp-bg: #222;
+$popUp-color: #000; //  dark mode: $popUp-color: #fff;
 $popUp-radius: 16px;
 $popUp-bg-overlay: #333;
 $popUp-opacity-overlay: 1;
-$popUp-max-width: 375px;
 
 
 // CONTENT
 $content-max-width: 414px;
+$content-bg: #eee;    //  dark mode: $popUp-bg: #222;
+$content-color: #000; //  dark mode: $popUp-color: #fff;

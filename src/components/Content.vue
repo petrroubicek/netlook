@@ -8,8 +8,8 @@
       <img :src="item.stepImg" class="content-step__img">
       <div class="content-step__box">
         <h2>{{item.stepTitle}}</h2>
-        <a v-if="item.link" href="#">{{item.stepDescription}}</a>
-        <span v-if="!item.link">{{item.stepDescription}}</span>
+        <a v-if="item.stepLink" href="#">{{item.stepDescription}}</a>
+        <span v-if="!item.stepLink">{{item.stepDescription}}</span>
       </div>
     </div>
 
@@ -17,7 +17,7 @@
     <button
       type="button"
       class="content-back btn btn--primary btn--radius"
-      @click="showHomeFN()"
+      @click="showHomeFN"
     >Back home</button>
   </div>
 </template>

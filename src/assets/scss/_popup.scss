@@ -7,7 +7,7 @@
   margin: 0px auto;
   height: 100%;
   width: 100%;
-  max-width: $popUp-max-width;
+  max-width: $default-max-width;
 
   &-content {
     position: absolute;
@@ -53,6 +53,7 @@
         margin: 20px 0px;
         font-family: "SF UI Display Semibold";
         font-size: 18px;
+        color: $popUp-color;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -60,6 +61,7 @@
       p {
         margin: 10px 0px 45px;
         font-size: 14px;
+        color: $popUp-color;
       }
       
       .double-row {

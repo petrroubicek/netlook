@@ -1,11 +1,12 @@
 <template>
   <div class="row">
+    <!-- INTRO -->
     <h1 class="title">VÍTEJTE</h1>
     <p class="description">Výsledné řešení se nachází
       <br>po kliknutí na konkrétní button.
     </p>
 
-    <!--% TASKS -->
+    <!-- TASKS -->
     <button
       type="button"
       class="component-button btn btn--primary btn--radius"
@@ -40,7 +41,7 @@
       @click="showContentFN()"
     >Show content</button>
 
-    <!--% CONTACT -->
+    <!-- CONTACT -->
     <a
       href="tel:777556047"
       class="contact-button btn btn--primary btn--radius btn--border"
@@ -66,7 +67,7 @@ export default {
           message: "Random text all users will see. You",
           btnHorizontal: false,
           btn1Text: "Btn1",
-          btn1Class: "btn btn--primary btn--radius",
+          btn1Class: "btn btn--primary btn--radius btn--shadow",
           btn2Text: "Btn3",
           btn2Class: "btn"
         },

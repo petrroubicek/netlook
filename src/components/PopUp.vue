@@ -5,7 +5,7 @@
       <button
         type="button"
         class="popup-content__close btn btn--icon btn--close"
-        @click="showHomeFN()"
+        @click="showHomeFN"
       ></button>
 
       <!-- POPUP HEADER -->
