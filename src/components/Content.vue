@@ -11,10 +11,10 @@
     </div>
 
     <button
-        type="button"
-        class="btn btn--primary btn--radius"
-        @click="showHomeFN()"
-      >Back home</button>
+      type="button"
+      class="content-back btn btn--primary btn--radius"
+      @click="showHomeFN()"
+    >Back home</button>
   </div>
 </template>
 

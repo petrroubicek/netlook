@@ -8,17 +8,35 @@
   margin: 0px auto;
   height: 100%;
   width: 100%;
-  max-width: $popUp-max-width;
+  max-width: $content-max-width;
+  //@include gradient(#fff, #d6d6d6);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #fcfcfc, #f8f8f8, #f5f5f5, #ededed, #e5e5e5, #dedede, #d6d6d6);
 
   &-title {
     margin: 35px 0px 30px;
-    font-family: "SF UI Display Semibold";
+    font-family: "SF Pro Text";
     font-size: 27px;
+    font-weight: bold;
+  }
+
+  & > div:not(:last-of-type) {
+    padding-bottom: 95px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 30px;
+      left: 0px;
+      height: 32px;
+      width: 100%;
+      background: url("./images/arrow.png") center center no-repeat;
+    }
   }
 
   &-step {
+    position: relative;
     display: flex;
-    padding: 0px 15px 95px;
+    padding: 0px 15px;
 
     &__img {
       height: auto;
@@ -29,19 +47,43 @@
       margin-left: 30px;
 
       h2 {
+        position: relative;
         margin: 25px 0px 15px;
         padding-left: 64px;
         text-align: left;
         font-size: 22px;
-        font-family: "SF UI Display Semibold";
+        font-family: "SF Pro Text";
+
+        &:before {
+          content: counter(step, decimal);
+          counter-increment: step;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          left: 0px;
+          top: -4px;
+          height: 34px;
+          width: 34px;
+          font-size: 22px;
+          font-family: "SF UI Display Bold";
+          background: $main-color;
+          color: #fff;
+          @include border-radius(100%);
+        }
       }
       a, span {
         text-align: left;
         display: inline-block;
         font-size: 14px;
+        font-family: "SF Pro Text";
         color: #000;
         line-height: 1.4;
       }
     }
+  }
+
+  &-back {
+    margin: 40px 20px 20px; 
   }
 }

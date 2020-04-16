@@ -101,6 +101,7 @@ export default {
 
 body {
   margin: 0px;
+  counter-reset: step;
 }
 
 #app {
