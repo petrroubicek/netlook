@@ -1,24 +1,27 @@
 <template>
   <div class="popup">
-    <div class="popup__content">
+    <div class="popup-content">
       <button
         type="button"
-        class="popup__content-close btn btn--icon btn--close"
+        class="popup-content__close btn btn--icon btn--close"
         @click="showHomeFN()"
       ></button>
-      <div class="popup__content-header">
+      <div class="popup-content__header">
         <img v-if="profileImg" :src="profileImg" class="popup__content-header">
       </div>
-      <div class="popup__content-body">
-        <h2>{{title}}</h2>
+      <div class="popup-content__body">
+        <h2 v-bind:class="{'double-row': doubleRowTitle}">{{title}}</h2>
         <p>{{message}}</p>
       </div>
-      <div class="popup__content-footer">
-        <button type="button" class="btn btn--primary btn--radius">{{btn1}}</button>
-        <button type="button" class="btn">{{btn2}}</button>
+      <div
+        class="popup-content__footer"
+        v-bind:class="{'popup-content__footer--vertical': !btnHorizontal}"
+      >
+        <button type="button" :class="btn1Class">{{btn1Txt}}</button>
+        <button type="button" :class="btn2Class">{{btn2Txt}}</button>
       </div>
     </div>
-    <div class="popup__overlay"></div>
+    <div class="popup-overlay"></div>
   </div>
 </template>
 
@@ -29,9 +32,13 @@ export default {
     selectedComponent: String,
     profileImg: String,
     title: String,
+    doubleRowTitle: Boolean,
     message: String,
-    btn1: String,
-    btn2: String,
+    btnHorizontal: Boolean,
+    btn1Txt: String,
+    btn1Class: String,
+    btn2Txt: String,
+    btn2Class: String,
     showHomeFN: Function
   }
 };

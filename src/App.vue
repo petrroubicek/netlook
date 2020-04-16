@@ -12,9 +12,13 @@
         :selectedComponent="part"
         :profileImg="popUp.profileImg"
         :title="popUp.title"
+        :doubleRowTitle="popUp.doubleRowTitle"
         :message="popUp.message"
-        :btn1="popUp.btn1"
-        :btn2="popUp.btn2"
+        :btnHorizontal="popUp.btnHorizontal"
+        :btn1Txt="popUp.btn1Txt"
+        :btn1Class="popUp.btn1Class"
+        :btn2Txt="popUp.btn2.Txt"
+        :btn2Class="popUp.btn2Class"
         :showHomeFN="showHome"
       ></PopUp>
       <Content v-if="part == 'Content'" :selectedComponent="part" :showHomeFN="showHome"></Content>
@@ -35,21 +39,38 @@ export default {
       popUp: {
         profileImg: "",
         title: "",
+        doubleRowTitle: false,
         description: "",
-        btn1: "",
-        btn2: ""
+        btnHorizontal: false,
+        btn1Txt: "",
+        btn1Class: "",
+        btn2Txt: "",
+        btn2Class: ""
       }
     };
   },
   methods: {
-    showPopUp(profileImg, title, message, btn1, btn2) {
+    showPopUp(
+      profileImg,
+      title,
+      doubleRowTitle,
+      message,
+      btnHorizontal,
+      btn1Txt,
+      btn1Class,
+      btn2Txt,
+      btn2Class
+    ) {
       this.part = "PopUp";
       this.popUp.profileImg = profileImg;
       this.popUp.title = title;
+      this.popUp.doubleRowTitle = doubleRowTitle;
       this.popUp.message = message;
-      this.popUp.btn1 = btn1;
-      this.popUp.btn2 = btn2;
-      //this.$emit("changePart", this.selectedComponent);
+      this.popUp.btnHorizontal = btnHorizontal;
+      this.popUp.btn1Txt = btn1Txt;
+      this.popUp.btn1Class = btn1Class;
+      this.popUp.btn2Txt = btn2Txt;
+      this.popUp.btn2Class = btn2Class;
     },
     showContent() {
       this.part = "Content";

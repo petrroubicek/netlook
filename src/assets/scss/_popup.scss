@@ -1,60 +1,96 @@
-@import "mixins.scss";
+@import "mixins.scss", "variables.scss";
 
 .popup {
   position: fixed;
   display: flex;
-  left: 0px;
   top: 0px;
+  margin: 0px auto;
   height: 100%;
   width: 100%;
+  max-width: $popUp-max-width;
 
-  &__content {
+  &-content {
     position: absolute;
     top: 50%;
     left: calc(50% - 31px);
     transform: translate(-50%, -50%);
     margin: 0px 31px;
-    padding: 20px;
+    padding: 15px;
     height: auto;
-    width: calc(100% - 103px);
-    background: #eee;
+    width: calc(100% - 91px);
+    background: $popUp-bg;
     z-index: 10;
-    @include border-radius(20px);
+    @include border-radius($popUp-radius);
 
-    &-header {
+    &__header {
       margin: 0px auto;
-      height: 48px;
-      width: 48px;
+      height: 70px;
+      width: 70px;
       @include border-radius(100%);
-      background: url("../img/profil.png");
+      background: url("./images/profil.png") center center no-repeat;
 
       img {
-        height: 48px;
-        width: 48px;
+        height: auto;
+        width: 100%;
         @include border-radius(100%);
       }
     }
 
-    &-body {
+    &__body {
       h2 {
+        display: -webkit-box;
+        margin: 20px 0px;
         font-family: "SF UI Display Semibold";
-        font-size: 18pt;
+        font-size: 18px;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      p {
+        margin: 10px 0px 45px;
+        font-size: 14px;
+      }
+      
+      .double-row {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: 45px;
       }
     }
 
-    &-close {
+    &__footer {
+      display: flex;
+      padding: 0px 22px;
+
+      &--vertical {
+        flex-direction: column;
+      }
+      &--horizontal {
+        flex-direction: row;
+      }
+
+      button {
+        margin-bottom: 10px;
+        height: 44px;
+        width: 100%;
+      }
+      button:last-of-type {
+        margin-bottom: 0px;
+      }
+    }
+
+    &__close {
       position: absolute;
       left: 0px;
       top: 0px;
-      height: 14px;
-      width: 14px;
       padding: 0px;
-      color: #aaa;
-      background: url("../img/close.png");
+      background: url("./images/close.png") center center no-repeat;
     }
   }
 
-  &__overlay {
-    @include overlay(#333, 1);
+  &-overlay {
+    @include overlay($popUp-bg-overlay, $popUp-opacity-overlay);
   }
 }

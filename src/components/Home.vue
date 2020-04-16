@@ -8,12 +8,28 @@
     <button
       type="button"
       class="component-button btn btn--primary btn--radius"
-      @click="showPopUpFN(datas.popUp1.profileImg, datas.popUp1.title, datas.popUp1.message, datas.popUp1.btn1, datas.popUp1.btn2)"
+      @click="showPopUpFN(datas.popUp1.profileImg, 
+      datas.popUp1.title, 
+      datas.popUp1.doubleRowTitle, 
+      datas.popUp1.message, 
+      datas.popUp1.btnHorizontal,
+      datas.popUp1.btn1Txt, 
+      datas.popUp1.btn1Class, 
+      datas.popUp1.btn2Txt, 
+      datas.popUp1.btn2Class)"
     >Show popup #1</button>
     <button
       type="button"
       class="component-button btn btn--primary btn--radius"
-      @click="showPopUpFN(datas.popUp2.profileImg, datas.popUp2.title, datas.popUp2.message, datas.popUp2.btn1, datas.popUp2.btn2)"
+      @click="showPopUpFN(datas.popUp2.profileImg, 
+      datas.popUp2.title, 
+      datas.popUp2.doubleRowTitle, 
+      datas.popUp2.message, 
+      datas.popUp2.btnHorizontal,
+      datas.popUp2.btn1Txt, 
+      datas.popUp2.btn1Class, 
+      datas.popUp2.btn2Txt, 
+      datas.popUp2.btn2Class)"
     >Show popup #2</button>
     <button
       type="button"
@@ -43,17 +59,24 @@ export default {
         popUp1: {
           profileImg: "",
           title: "Title example for two rows",
+          doubleRowTitle: true,
           message: "Random text all users will see. You",
-          btn1: "Btn1",
-          btn2: "Btn3"
+          btnHorizontal: false,
+          btn1Txt: "Btn1",
+          btn1Class: "btn btn--primary btn--radius",
+          btn2Txt: "Btn3",
+          btn2Class: "btn"
         },
         popUp2: {
-          profileImg:
-            "https://i.pinimg.com/originals/21/36/91/21369158540994fa57bf2f250f88a2dd.jpg",
+          profileImg: "../images/girl.png",
           title: "Title example for two rows",
+          doubleRowTitle: false,
           message: "Random text all users will see. You don´t know",
-          btn1: "Btn2",
-          btn2: "Btn1"
+          btnHorizontal: true,
+          btn1Txt: "Btn2",
+          btn1Class: "btn btn--primary btn--radius btn-border",
+          btn2Txt: "Btn1",
+          btn2Class: "btn btn--primary btn--radius"
         }
       }
     };
